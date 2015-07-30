@@ -1,0 +1,25 @@
+<div class="col-md-5" style="margin-top:165px;padding-left:90px;">
+  <h2>{{ vmEdit.contact.firstName + ' ' + vmEdit.contact.lastName }}</h2>
+  <hr />
+  <form class="form-horizontal" name="editContactForm" role="form" style="padding-left:18px;">
+      <input-form ng-model="vmEdit.contact.firstName"
+            labels="{ placeholder: 'First Name', error_description: 'First Name is required' }"
+            form="editContactForm"
+            isreadonly="vmEdit.__state"
+            name="firstName"></input-form>
+
+      <input-form ng-model="vmEdit.contact.lastName"
+            labels="{ placeholder: 'Last Name', error_description: 'Last Name is required' }"
+            form="editContactForm"
+            isreadonly="vmEdit.__state"
+            name="lastName"></input-form>
+
+      <input-form ng-model="vmEdit.contact.mobile"
+            labels="{ placeholder: 'Mobile', error_description: 'Mobile is required' }"
+            form="editContactForm"
+            isreadonly="vmEdit.__state"
+            name="mobile"></input-form>  
+
+    <hr />
+  </form>
+</div>

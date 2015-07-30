@@ -3,8 +3,12 @@
 
 	var controller = (function(){
 		function controller(){
-			this.header = 'Hello World';
+			this.name = 'Juan';
 		}
+
+		controller.prototype.changeName = function(){
+			this.name = "Jose"
+		};
 
 		return controller;
 	})();
@@ -12,9 +16,9 @@
 	var helloWorld = function(){
 		return {
 			scope: {
-				header: '@'
+				changeName: '&'
 			},
-			template: '<h1>{{ header }}</h1>'
+			template: '<button ng-click="changeName()">Change Name</button>'
 		}
 	};
 

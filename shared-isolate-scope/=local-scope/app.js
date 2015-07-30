@@ -3,7 +3,7 @@
 
 	var controller = (function(){
 		function controller(){
-			this.header = 'Hello World';
+			this.name = 'Pedro';
 		}
 
 		return controller;
@@ -15,9 +15,10 @@
 	var helloWorld = function(){
 		return {
 			scope: {
-				header: '='
+				name: '='
 			},
-			template: '<h1>Isolate Scope Two-way Binding</h1><br/><input type="text" ng-model="header" />'
+			template: '<h1>Isolate Scope Two-way Binding</h1><br/><input type="text" ng-model="name" />' +
+				'<br/><br/><button ng-click="name=\'James\'">Change Name</button>'
 		}
 	};
 

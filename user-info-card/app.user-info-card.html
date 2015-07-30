@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+  <div class="panel-heading" ng-click="vm.collapse()">{{vm.user.name}}</div>
+  <div class="panel-body" ng-hide="vm.collapsed">
+    <div ng-show="!!vm.user.address">
+      <h4>Address:</h4>
+      {{vm.user.address.street}}<br />
+      {{vm.user.address.city}}<br />
+    </div>
+    <br /> 
+    
+    <h4>Contacts</h4>
+    <ul>
+      <li ng-repeat="contact in vm.user.contacts">
+        {{ contact }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -3,7 +3,7 @@
 
 	var controller = (function(){
 		function controller(){
-			this.header = 'Hello World';
+			this.name = 'Jose';
 		}
 
 		return controller;
@@ -12,9 +12,9 @@
 	var helloWorld = function(){
 		return {
 			scope: {
-				header: '@'
+				name: '@'
 			},
-			template: '<h1>{{ header }}</h1>'
+			template: '<h1>{{ name }}</h1>'
 		}
 	};
 

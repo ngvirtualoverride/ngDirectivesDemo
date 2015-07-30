@@ -4,10 +4,11 @@
 	<title>AngularJS Directives Demo ( @ local scope )</title>
 </head>
 <body>
+	<h1>(@ Local Scope)</h1>
 	<div ng-controller="MainController as main">
-		<hello-world header="main.header"></hello-world>
+		<hello-world name="{{ main.name }}"></hello-world>
 	</div>
-	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../../bower_components/angular/angular.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>

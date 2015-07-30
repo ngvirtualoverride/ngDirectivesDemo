@@ -1,0 +1,53 @@
+<div class="col-md-7">
+	<h2><label class="control-label">Contacts</label></h2>
+		
+	<div class="spacer30"></div>
+
+	<form class="form-horizontal" role="form">
+
+	    <div class="form-group">
+	        <div class="input-group" ng-show="vmMain.contacts.length > 0">
+	            <div class="input-group-addon">
+	            	<span class="glyphicon glyphicon-search"></span>
+	            </div>
+	            <input class="form-control" type="text" placeholder="Contact Name" ng-model="search">
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <label class="label-info" ng-show="vmMain.contacts.length === 0">
+	        	No Records Found
+	        </label>
+	        <table class="table table-hover" ng-show="vmMain.contacts.length > 0">
+	            <thead>
+	                <tr>
+	                    <th>Name</th>
+	                    <th>Mobile Number</th>
+	                    <th>Action</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr ng-repeat="contact in vmMain.contacts | filter:search:strict">
+	                    <td>
+	                    	<span class="glyphicon glyphicon-user"></span>
+	                    	{{ contact.firstName + ' ' + contact.lastName }}
+	                    </td>
+	                    <td>
+	                    	<span class="glyphicon glyphicon-phone"></span>
+	                    	{{ contact.mobile }}
+	                    </td>
+	                    <td>
+	                    	<button class="btn btn-primary" ng-click="vmMain.edit(contact)">
+	                    		<span class="glyphicon glyphicon-edit"></span>Edit
+	                    	</button>
+	                    	<button class="btn btn-primary" ng-click="vmMain.detail(contact)">
+	                    		<span class="glyphicon glyphicon-th"></span>Details
+	                    	</button>
+	                    </td>
+	                </tr>
+	            </tbody>
+	        </table>
+	    </div>
+	</form>
+</div>
+

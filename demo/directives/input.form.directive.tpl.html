@@ -1,0 +1,20 @@
+<div class="form-group" ng-class="{ 'has-error' : inputCtrl.validate() }">
+    <div class="row">
+      <label class="col-md-6" for="{{ inputCtrl.name }}" class="col-sm-2 control-label">
+          {{ inputCtrl.labels.placeholder }}
+      </label>
+    </div>
+    <div class="row">
+    <div class="col-sm-12">
+        <input type="text" 
+               class="form-control" 
+               name="{{ inputCtrl.name }}" 
+               id="inputCtrl.name" 
+               placeholder="{{ labels.placeholder }}" 
+               ng-model="inputCtrl.ngModel" 
+               input-readonly isreadonly="inputCtrl.isreadonly"
+               required />
+    </div>
+    </div>
+    <p ng-show="inputCtrl.validate()" class="help-block">{{ inputCtrl.labels.error_description }}</p>
+</div>

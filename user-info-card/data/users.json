@@ -1,0 +1,14 @@
+{
+	"users": [{
+		"name": "Pedro",
+		"address": {
+			"street": "Kalye Lahat Pogi",
+			"city": "Makati",
+			"country": "Philippines"
+		},
+		"contacts": [
+			"Juan", 
+			"James"
+		]
+	}]
+}
