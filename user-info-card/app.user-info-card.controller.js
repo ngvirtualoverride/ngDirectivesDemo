@@ -4,7 +4,6 @@ var UserInfoCard;
 
 	var controller = (function(){
 		function controller(){
-			this.collapsed = false;
 		}
 
 		controller.prototype.collapse = function(){

@@ -4,20 +4,28 @@
 	var userController = (function(){
 		var userService, __users;
 
-		userController.$inject = ['$scope', 'UserService'];
+		userController.$inject = ['UserService'];
 
-		function userController($scope, UserService){
+		function userController(UserService){
+			var vm = this;
 			userService = UserService;
 
 			userService
 				.getAllUsers()
 				.success(function(data, status, headers, config){
-					$scope.user = data.users[0];
+					vm.users = data.users;
 				})
 				.error(function(data, status, headers, config){
 					console.log('error');
 				});			
 		}
+
+		userController.prototype.removeUser = function(user){
+			var index = vm.users.indexOf(user);
+	        if(index > -1) {
+	          vm.users.splice(index, 1);
+	        }			
+		};
 
 		return userController;
 	})();

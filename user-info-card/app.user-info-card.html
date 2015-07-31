@@ -1,6 +1,11 @@
 <div class="panel panel-primary">
-  <div class="panel-heading" ng-click="vm.collapse()">{{vm.user.name}}</div>
+  <div class="panel-heading" ng-click="vm.collapse()">
+    {{vm.user.name}}
+  </div>
   <div class="panel-body" ng-hide="vm.collapsed">
+    <button class="btn btn-primary" ng-click="removeuser(user)">
+        Remove
+    </button>
     <div ng-show="!!vm.user.address">
       <h4>Address:</h4>
       {{vm.user.address.street}}<br />

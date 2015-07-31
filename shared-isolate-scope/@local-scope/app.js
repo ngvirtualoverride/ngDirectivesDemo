@@ -4,6 +4,10 @@
 	var controller = (function(){
 		function controller(){
 			this.name = 'Jose';
+
+			this.names = [
+				"Pedro", "James"
+			];
 		}
 
 		return controller;
@@ -12,9 +16,9 @@
 	var helloWorld = function(){
 		return {
 			scope: {
-				name: '@'
+				firstName: '@'
 			},
-			template: '<h1>{{ name }}</h1>'
+			template: '<h1>{{ firstName }}</h1>'
 		}
 	};
 

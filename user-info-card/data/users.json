@@ -9,6 +9,19 @@
 		"contacts": [
 			"Juan", 
 			"James"
-		]
+		],
+		"isCollapsed": false
+	}, {
+		"name": "Juan",
+		"address": {
+			"street": "Kalye Lahat Pangit",
+			"city": "Makati",
+			"country": "Philippines"
+		},
+		"contacts": [
+			"Pedro", 
+			"James"
+		],
+		"isCollapsed": true
 	}]
 }

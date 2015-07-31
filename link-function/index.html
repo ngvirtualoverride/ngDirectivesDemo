@@ -2,17 +2,42 @@
 <html ng-app="demo">
 <head>
 	<title>AngularJS Directives Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.css" />
 </head>
 <body>
 
-	<video id="vid" spacebar-support controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
-      <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
-      <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
-      <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
-    </video>
+	<div class="container">
+		<video id="vid" spacebar-support controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+	      <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
+	      <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
+	      <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+	    </video>
+
+	    <br />
+	    <br />
+
+	    <div ng-controller="PersonController as person">
+		    <input type="text" 
+		           class="form-control" 
+		           name="firstName" 
+		           id="firstName" 
+		           placeholder="First Name" 
+		           ng-model="person.firstName"
+		           input-readonly isreadonly="person.isreadonly" />
+		    <br />
+	        <button class="btn btn-primary" ng-click="person.changeValue()">
+	    		<span class="glyphicon glyphicon-edit"></span>Change
+	    	</button>        
+	    </div>
+    </div>
+
 
 	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../../bower_components/angular/angular.js"></script>
 	<script src="app.js"></script>
+	<script src="readonly.directive.js"></script>
 </body>
 </html>

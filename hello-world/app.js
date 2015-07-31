@@ -1,14 +1,24 @@
 (function(){
 	'use strict';
 
+	var controller = (function(){  
+		function controller(){
+			this.name = 'Pedro2';
+		}
+
+		return controller;
+	})();
+
 	var helloWorld = function(){
 		return {
-			template: '<h1>Hello World</h1>'
+			replace: true,
+			template: '<h1>{{ vm.name }}</h1>'
 		}
 	};
 
 	angular
 		.module('demo', [])
-		.directive('helloWorld', helloWorld);
+		.controller('ShareScopeController', controller)
+		.directive('helloWorldPlannet', helloWorld);
 
 })();

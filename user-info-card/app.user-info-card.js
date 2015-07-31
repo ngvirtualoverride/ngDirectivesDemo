@@ -6,7 +6,9 @@
 			restrict: 'E',
 			templateUrl: 'app.user-info-card.html',
 			scope: {
-				user: '='
+				user: '=',
+				collapsed: '=',
+				removeuser: '&'
 			},
 			bindToController: true,
 			controller: UserInfoCard.Controller,

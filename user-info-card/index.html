@@ -5,8 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-	<div ng-controller="UserController" class="container">
-		<user-info-card user="user"></user-info-card>
+	<div ng-controller="UserController as vm" class="container" style="margin-top:20px;">
+		<div ng-repeat="user in vm.users">
+			<user-info-card user="user" 
+				removeuser="vm.removeUser(user)" 
+				collapsed="user.isCollapsed">
+			</user-info-card>
+		</div>
 	</div>
 	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

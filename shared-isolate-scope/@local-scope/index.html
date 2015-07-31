@@ -6,7 +6,9 @@
 <body>
 	<h1>(@ Local Scope)</h1>
 	<div ng-controller="MainController as main">
-		<hello-world name="{{ main.name }}"></hello-world>
+		<div ng-repeat="name in main.names">
+			<hello-world first-name="{{ name }}"></hello-world>
+		</div>
 	</div>
 	<script src="../../bower_components/angular/angular.js"></script>
 	<script src="app.js"></script>

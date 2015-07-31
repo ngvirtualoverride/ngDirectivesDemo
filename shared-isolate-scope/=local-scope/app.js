@@ -17,8 +17,7 @@
 			scope: {
 				name: '='
 			},
-			template: '<h1>Isolate Scope Two-way Binding</h1><br/><input type="text" ng-model="name" />' +
-				'<br/><br/><button ng-click="name=\'James\'">Change Name</button>'
+			templateUrl: 'app.html'
 		}
 	};
 

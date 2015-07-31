@@ -19,8 +19,23 @@
 		}
 	};
 
+	var controller = (function(){
+
+		function controller(){	
+			this.isreadonly = false;
+			this.firstName = 'Pedro';
+		}
+
+		controller.prototype.changeValue = function(){
+			this.isreadonly = !this.isreadonly;
+		};
+
+		return controller;
+	})();
+
 	angular
 		.module('demo', [])
+		.controller('PersonController', controller)
 		.directive('spacebarSupport', spacebarSupport);
 
 })();
